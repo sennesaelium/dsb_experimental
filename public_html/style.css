@@ -1,0 +1,42 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+
+/* 
+    Created on : 1-sep-2014, 11:34:50
+    Author     : sennesvi
+*/
+
+
+.map{
+    width:80px;
+    height:50px;
+}
+
+.land{
+    fill: #F9F6F4;
+    stroke: #9FAC61;
+}
+.departement32{
+    fill: #9FAC61;
+    stroke: #E81B0C;
+    stroke-width: 0.9;
+}
+/* Change settings and colors below */
+
+/* To display the box zoomed in around Paris, set opacity to 1. Default is 0, box hidden*/
+
+
+
+path:hover  {
+    fill: #CCCCCC;
+}
+
+
+path.land.departement32:hover  {
+    fill: #E81B0C; fill: #9FAC61;
+    stroke-width: 2;
+    cursor: pointer;
+}
