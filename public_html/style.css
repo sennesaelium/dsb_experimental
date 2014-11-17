@@ -9,8 +9,8 @@ and open the template in the editor.
     Author     : sennesvi
 */
 
-
 .map{
+    
     width:80px;
     height:50px;
 }
@@ -19,24 +19,48 @@ and open the template in the editor.
     fill: #F9F6F4;
     stroke: #9FAC61;
 }
+
+.landdetail{
+    fill: #9FAC61;
+    stroke: #F9F6F4;
+}
+
+.spotdsb{
+    fill: #e81b0c;
+}
+
 .departement32{
     fill: #9FAC61;
     stroke: #E81B0C;
     stroke-width: 0.9;
 }
-/* Change settings and colors below */
 
-/* To display the box zoomed in around Paris, set opacity to 1. Default is 0, box hidden*/
-
-
-
-path:hover  {
+path.land:hover  {
     fill: #CCCCCC;
 }
 
-
 path.land.departement32:hover  {
-    fill: #E81B0C; fill: #9FAC61;
+    fill: #E81B0C;
     stroke-width: 2;
     cursor: pointer;
+}
+
+.spotdsb:hover{
+    fill: #E81B0C;
+    stroke: #000000;
+    stroke-width: 2;
+    cursor: pointer;
+}
+
+.maptooltip{
+    background-color: #CCCCCC;
+    border: 1px #555555 solid;
+    display: block;
+    width: 50px;
+    margin: 1em;
+    z-index: 12;
+    position: relative;
+    top:100px;
+    left: 80px;
+    
 }
