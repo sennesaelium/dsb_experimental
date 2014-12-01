@@ -9,58 +9,61 @@ and open the template in the editor.
     Author     : sennesvi
 */
 
-.map{
-    
-    width:80px;
-    height:50px;
+.map {
+    width: 80px;
+    height: 50px;
 }
-
-.land{
+.land {
     fill: #F9F6F4;
     stroke: #9FAC61;
 }
-
-.landdetail{
+.landdetail {
     fill: #9FAC61;
     stroke: #F9F6F4;
 }
-
-.spotdsb{
+.spotdsb {
     fill: #e81b0c;
 }
-
-.departement32{
+.departement32 {
     fill: #9FAC61;
     stroke: #E81B0C;
     stroke-width: 0.9;
 }
-
-path.land:hover  {
+path.land:hover {
     fill: #CCCCCC;
 }
-
-path.land.departement32:hover  {
+path.land.departement32:hover {
     fill: #E81B0C;
     stroke-width: 2;
     cursor: pointer;
 }
-
-.spotdsb:hover{
+.spotdsb:hover {
     fill: #E81B0C;
     stroke: #000000;
     stroke-width: 2;
     cursor: pointer;
 }
+/* MapToolTips */
 
-.maptooltip{
-    background-color: #CCCCCC;
-    border: 1px #555555 solid;
-    display: block;
-    width: 50px;
-    margin: 1em;
-    z-index: 12;
-    position: relative;
-    top:100px;
-    left: 80px;
-    
+#region_name {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border: 1px solid #dbdbd6;
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 0.8em 0.4em 0.8em 0.4em;
+    width: 280px;
+    z-index: 1000;
+    color: #333;
+    -moz-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+#region_name:hover {
+    cursor: pointer;
+}
 }

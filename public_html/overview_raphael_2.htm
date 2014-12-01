@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/libs/jquery/jquery.js" type="text/javascript"></script>
+    <script src="js/libs/raphael/raphael-min.js" type="text/javascript"></script>
+
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+    <div id="rsr"></div>
+    <div id="region_name"></div>
+    <script src="france.js" type="text/javascript"></script>
+    <script>
+        for (var i = 0; i < complete_map.length; i++) {
+
+            complete_map[i].node.setAttribute('fill', '#D8E691');
+            complete_map[i].node.setAttribute('stroke', '#7B8C20');
+
+
+
+            if (complete_map[i].data('id') == 'departement_gers') {
+                complete_map[i].node.setAttribute('fill', '#20448C');
+                complete_map[i].node.setAttribute('stroke', '#20448C');
+                complete_map[i].node.setAttribute('stroke-width', '3');
+                complete_map[i].node.setAttribute('stroke-opacity', '10');
+            }
+
+            document.getElementById('region_name').style.display = "none";
+
+            // Showing off
+            complete_map[i].mouseover(function(e) {
+
+
+                var x = e.pageX - 90;
+                var y = e.pageY - 88;
+                document.getElementById('region_name').style.top = "155px";
+                document.getElementById('region_name').style.left = x + "px";
+                document.getElementById('region_name').innerHTML = this.data('region');
+
+                if (this.data('id') == 'departement_gers') {
+                    document.getElementById('region_name').style.display = "inline";
+                    this.node.style.opacity = 0.3;
+                    this.node.style.cursor = "pointer";
+
+                } else {
+                    document.getElementById('region_name').style.display = "none";
+                    this.node.style.opacity = 0.3;
+                }
+
+
+            });
+
+
+            complete_map[i].mouseout(function(e) {
+                this.node.style.opacity = 1;
+
+            });
+
+        };
+    </script>
+
+
+    <!-- html container for the map -->
+
+
+</body>
+
+</html>
